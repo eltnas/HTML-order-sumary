@@ -83,7 +83,7 @@ main
           font-size: $Paragraph
 
       & #desc-choice
-        width: 80%
+        width: 90%
         margin: 1rem auto
 
         & #choice-plan
@@ -91,15 +91,71 @@ main
           flex-direction: row
           justify-content: space-between
 
+          & #plan-image
+            flex: 1
+
           & #plan-desc
-            
+            flex: 2
+            width: 5rem
+            display: flex
+            flex-direction: column
+            align-content: center
 
+            & em
+              color: $Dark-blue
 
+            & p
+              font-size: .9em
+              color: $Desaturated-blue
 
+          & #choice-link
+            flex: 1
+            display: grid
+            place-items: center
 
+            & a
+              font-size: 1em
+              text-decoration: none
+              color: $Bright-blue
 
+              &:hover
+                text-decoration: underline
+                color: $Dark-blue
 
+        & #choice-btn
+          width: 100%
+          display: flex
+          flex-direction: column
+          align-items: center
 
+          & button
+            width: 100%
+            height: 50px
+            margin-top: 2rem
+            border-radius: 10px
+            color: $Very-pale-blue
+            background-color: $Bright-blue
+            font-size: 1.1em
+            font-weight: 400
+            cursor: pointer
+
+            &:hover
+              background-color: $Desaturated-blue
+              color: $Pale-blue
+
+          & #cancel-btn
+            width: 100%
+            height: 50px
+            margin-top: 2rem
+            font-size: 1.1em
+            font-weight: 400
+            text-align: center
+            color: $Desaturated-blue
+            cursor: pointer
+
+            &:hover
+              color: $Dark-blue
+              text-decoration: underline
 
 @include minWidth(450)
   #main-bg
